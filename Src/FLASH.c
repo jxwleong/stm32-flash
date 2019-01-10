@@ -66,6 +66,8 @@ int flashUnlock(void){
  * @retval  return the status of lock bit in flash control register
  */
 int flashLock(void){
+	(Flash)->CR &= ~(FLASH_PG | FLASH_SER | FLASH_MASS_ERASE_1 \
+					 | FLASH_MASS_ERASE_2);
 	(flash)->CR |= FLASH_LOCK;
 	return (flash)->CR & FLASH_LOCK;
 }
@@ -186,6 +188,14 @@ void flashEnableProgramming(int programSize){
 void flashDisableProgramming(void){
 	while(isFlashBusy()){} // wait for BSY flag cleared
 		(flash)->CR &= ~(FLASH_PG);
-
 }
 
+/*
+ * @desc 	Wait until the BUSY bit is clear (ready for operation)
+ *
+ */
+void flashWaitTillNotBusy(void){
+	while(isFlashBusy()){
+
+	} // wait for BSY flag cleared
+}

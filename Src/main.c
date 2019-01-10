@@ -97,7 +97,7 @@ int main(void)
 	  flashDisableProgramming();
 	  //flashSectorErase(FLASH_MEM_SECTOR_13);
 	  flashMassErase(FLASH_MEM_BANK_2);
-
+	  //(flash)->CR &= ~(FLASH_MASS_ERASE_2);
 	  flashLock();
   /* USER CODE END 1 */
 
