@@ -5,6 +5,7 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Src/FLASH.c \
+../Src/common.c \
 ../Src/main.c \
 ../Src/stm32f4xx_hal_msp.c \
 ../Src/stm32f4xx_it.c \
@@ -12,6 +13,7 @@ C_SRCS += \
 
 OBJS += \
 ./Src/FLASH.o \
+./Src/common.o \
 ./Src/main.o \
 ./Src/stm32f4xx_hal_msp.o \
 ./Src/stm32f4xx_it.o \
@@ -19,6 +21,7 @@ OBJS += \
 
 C_DEPS += \
 ./Src/FLASH.d \
+./Src/common.d \
 ./Src/main.d \
 ./Src/stm32f4xx_hal_msp.d \
 ./Src/stm32f4xx_it.d \

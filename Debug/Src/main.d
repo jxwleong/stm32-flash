@@ -25,6 +25,7 @@ Src/main.o: ../Src/main.c C:/student/JLXW/STM32_FLASH/Inc/main.h \
  C:/student/JLXW/STM32_FLASH/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
  C:/student/JLXW/STM32_FLASH/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  C:/student/JLXW/STM32_FLASH/Inc/FLASH.h \
+ C:/student/JLXW/STM32_FLASH/Inc/common.h \
  C:/student/JLXW/STM32_FLASH/Inc/common.h
 
 C:/student/JLXW/STM32_FLASH/Inc/main.h:
@@ -80,5 +81,7 @@ C:/student/JLXW/STM32_FLASH/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 C:/student/JLXW/STM32_FLASH/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
 
 C:/student/JLXW/STM32_FLASH/Inc/FLASH.h:
+
+C:/student/JLXW/STM32_FLASH/Inc/common.h:
 
 C:/student/JLXW/STM32_FLASH/Inc/common.h:

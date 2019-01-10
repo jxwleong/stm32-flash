@@ -43,6 +43,9 @@
 /* USER CODE BEGIN Includes */
 #include "FLASH.h"
 #include <stdio.h>
+#include <stdint.h>
+#include <string.h>
+#include "common.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -73,10 +76,29 @@ static void MX_GPIO_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	  configureFlashWaitStates(1.3, 12000000);
+	  /*configureFlashWaitStates(1.3, 12000000);
 	  configureFlashWaitStates(2.2, 23000000);
 	  configureFlashWaitStates(2.7, 36000000);
-	  configureFlashWaitStates(3.3, 180000000);
+	  configureFlashWaitStates(3.3, 180000000);*/
+
+
+
+
+	  flashUnlock();
+
+	  flashSectorErase(FLASH_MEM_SECTOR_13);
+	  char *ptr =  (uint32_t)0x08104000;
+	  flashEnableProgramming(FLASH_PSIZE_8);
+	  stringCopy(ptr, "Hello! How are You?");
+
+	  char *ptr2 =  (uint32_t)0x081E0000;
+	  flashEnableProgramming(FLASH_PSIZE_8);
+	  stringCopy(ptr2, "HEY! Nice to meet you!");
+	  flashDisableProgramming();
+	  //flashSectorErase(FLASH_MEM_SECTOR_13);
+	  flashMassErase(FLASH_MEM_BANK_2);
+
+	  flashLock();
   /* USER CODE END 1 */
 
   /* MCU Configuration----------------------------------------------------------*/
